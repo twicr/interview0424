@@ -4,6 +4,7 @@
 # HTML
 ### 简述下html5的离线存储原理，同时说明如何使用？
 localStorage 没有时间限制的存储
+
 sessionStorage 针对一个session的数据存储
 # CSS
 ### 清除浮动的方式有哪些及优缺点？
