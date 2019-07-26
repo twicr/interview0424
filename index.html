@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var str = "Hello World!";
+		function demo(str){
+			return str.split('').map(s => {
+				return String.fromCharCode(s.charCodeAt() + Math.floor(Math.random() * 10));
+			}).join('');
+		}
+	</script>
+</body>
+</html>
