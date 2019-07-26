@@ -13,28 +13,12 @@ sessionStorage 针对一个session的数据存储
 * 外部盒子添加浮动，可能需重新布局
 * 通过伪元素添加clear属性
 # JS
-### 统计某一字符或字符串在另一个字符串中出现的次数
-* 使用split()方法
+### 写一个加密字符串的方法
+通过Unicode编码加密，可能无法解密
 ```javascript
-var num = strParent.split(str).length - 1;
-console.log(num);
-```
-* 使用includes()方法判断
-```javascript
-function substrCount(str, target) {
-	let count = 0;
-	while (str.includes(target)) {
-		const index = str.indexOf(target);
-		count++;
-		str = str.substring(index + target.length);
-	}
-	return count;
-}
-```
-* 使用match()方法遍历
-```javascript
-function count(str, param) {
-	const reg = new RegExp(param, 'g');
-	return str.match(reg).length;
+function demo(str){
+	return str.split('').map(s => {
+		return String.fromCharCode(s.charCodeAt() + Math.floor(Math.random() * 10));
+	}).join('');
 }
 ```
